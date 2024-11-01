@@ -1,0 +1,43 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  inline-size: 100%;
+  block-size: 100%;
+}
+
+body {
+  display: grid;
+  grid-template-columns: auto;
+  grid-template-rows: 1fr 1fr 1fr 1fr;
+  font-family: sans-serif;
+  gap: 1rem;
+  background-color: #222;
+  color: #eee;
+}
+
+.section {
+  font-size: 3rem;
+  text-align: center;
+  transition: opacity 400ms;
+
+  & > button {
+    cursor: pointer;
+    font-size: inherit;
+    border: thin solid #eee;
+    background-color: #333;
+    color: #eee;
+    inline-size: 100%;
+    block-size: 100%;
+  }
+}
+
+.section-debt,
+.section-result {
+  display: grid;
+  place-content: center;
+}
+
+.hidden {
+  opacity: 0;
+}
